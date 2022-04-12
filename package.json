@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "gulp": "gulp",
     "lint": "npx eslint ./**/*.js",
     "lint-fix": "npx eslint ./**/*.js --fix",
     "test": "mocha"
