@@ -21,7 +21,7 @@ function clean() {
 }
 
 function qualityAssurance(cb) {
-  log("assurance Vue's code quality");
+  log('checking code quality');
   return exec('npm run lint', (err, stdout, stderr) => {
     log(stdout);
     log(stderr);
