@@ -38,6 +38,15 @@ function doTest(cb) {
   });
 }
 
+function testQualityAssurance(cb) {
+  log('test coverage');
+  return exec('npm run coverage', (err, stdout, stderr) => {
+    log(stdout);
+    log(stderr);
+    cb(err);
+  });
+}
+
 function createProdBuildFolder() {
   const dir = paths.prod_build;
   log(`Creating the folder if not exist  ${dir}`);
@@ -66,6 +75,7 @@ exports.default = series(
   clean,
   qualityAssurance,
   doTest,
+  testQualityAssurance,
   createProdBuildFolder,
   copyNodeJSCodeTask,
   zippingTask,

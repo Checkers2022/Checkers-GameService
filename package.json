@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "coverage": "nyc npm run test",
     "gulp": "gulp",
     "lint": "npx eslint ./**/*.js",
     "lint-fix": "npx eslint ./**/*.js --fix",
@@ -22,6 +23,7 @@
     "gulp": "^4.0.2",
     "gulp-zip": "^5.1.0",
     "mocha": "^9.2.2",
+    "nyc": "^15.1.0",
     "ramda": "^0.28.0",
     "webpack-stream": "^7.0.0"
   }
